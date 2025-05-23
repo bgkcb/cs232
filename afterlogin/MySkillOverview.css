@@ -1,0 +1,186 @@
+/* Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #e3e4e6;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Layout */
+.layout {
+  display: flex;
+  flex-grow: 1;
+  overflow: hidden;
+  height: calc(100vh - 60px);
+}
+
+/* Sidebar */
+.sidebar {
+  width: 220px;
+  background-color: #273043;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.05);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+}
+
+/* เมนูใน sidebar */
+.menu {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.menu-item {
+  text-decoration: none;
+  color: #ccc;
+  font-weight: 600;
+  padding: 10px 12px;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+
+.menu-item.active,
+.menu-item:hover {
+  background-color: #3e4a66;
+  color: #fff;
+}
+
+/* Main content */
+.main-content {
+  flex-grow: 1;
+  overflow-y: auto;
+  padding: 30px 40px;
+  background: #f4f6f8;
+}
+
+/* Container */
+.container {
+  max-width: 1300px;
+  margin: auto;
+}
+
+/* Main box */
+.skills-box {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+/* แก้ width จาก 100% เป็น 48% (หรือ 49%) */
+.skill-section {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 0 6px rgb(0 0 0 / 0.1);
+  padding: 25px 30px;
+  width: 100%;  /* เปลี่ยนจาก 100% */
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 20px;
+}
+
+.skill-section h3 {
+  font-weight: 700;
+  font-size: 1.2rem;
+  margin-bottom: 25px;
+  letter-spacing: 0.06em;
+}
+
+/* Skills list */
+.skills-list {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* Each skill item */
+.skill-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-weight: 600;
+  color: #444;
+}
+
+/* ชื่อ skill กว้างขึ้น */
+.skill-name {
+  width: 130px;
+  flex-shrink: 0;
+}
+
+/* Progress bar */
+.progress-bar {
+  flex-grow: 1;
+  height: 16px;
+  background: #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+}
+
+/* เส้นสีฟ้าคะแนน */
+.progress-fill {
+  height: 100%;
+  background: #4a90e2;
+  border-radius: 8px 0 0 8px;
+  transition: width 0.4s ease;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 8px;
+  color: white;
+  font-weight: 700;
+  font-size: 0.85rem;
+  user-select: none;
+}
+.skill-section.learning-activities {
+  margin-left: 40px;  /* เพิ่มพื้นที่ว่างทางซ้าย เพื่อให้ดูเหมือนขยายขวา */
+  margin-top: 30px;
+  max-width: 900px;   /* กำหนดความกว้างสูงสุด */
+  width: 100%;
+}
+.learning-activities-list {
+  display: flex;
+  gap: 300px;
+  font-size: 1rem;       /* ขนาดฟอนต์ใหญ่ขึ้นจากเดิม */
+  line-height: 1.6;      /* เว้นบรรทัดมากขึ้น อ่านง่ายขึ้น */
+  color: #333;
+  margin-top: 10px;
+}
+
+.learning-activities-list div,
+.learning-activities-list p,
+.learning-activities-list li {
+  margin-bottom: 10px;   /* เว้นระยะห่างระหว่างบรรทัด */
+}
+.learning-activities-hard,
+.learning-activities-soft {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* ชื่อหัวข้อย่อย */
+.learning-activities-hard h4,
+.learning-activities-soft h4 {
+  margin-bottom: 8px;
+  font-weight: 600;
+  white-space: nowrap;      /* ห้ามขึ้นบรรทัดใหม่ */
+  overflow: hidden;         /* ตัดข้อความที่เกินพื้นที่ */
+  text-overflow: ellipsis;  /* แสดง ... เมื่อข้อความยาวเกิน */
+  max-width: 100%;          /* กำหนดให้เต็มพื้นที่ของ container */
+}

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Student Dashboard</title>
+  <link rel="stylesheet" href="/afterlogin/student.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="/afterlogin/navbar.css" />
+  <script src="./ืnavbar.js"></script>
+</head>
+<body>
+  <div id="navbar-container"></div>
+  <div class="layout">
+    <!-- Sidebar (ถ้ามีใน navbar.html หรือแยก) -->
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <!-- Welcome -->
+      <section class="confirm-card">
+        <div class="text">
+          <h2>Confirm Your Activities</h2>
+          <p>Receive an event code from the organizer and confirm your participation.</p>
+          <button onclick="openConfirmPopup()">Enter Code</button>
+        </div>
+        <div class="illustration">
+          <img src="../picture/teacher.png" alt="Verify" />
+        </div>
+      </section>
+
+      <!-- Info Panels -->
+      <section class="info-panels">
+        <div class="panel">
+          <h3>Profile</h3>
+          <p><strong>Name:</strong> Chayanon Puranapura</p>
+          <p><strong>Joined:</strong> May 23, 2025</p>
+          <p><strong>Email:</strong> Chayanon.pur@dome.tu.ac.th</p>
+        </div>
+
+        <div class="panel">
+          <h3>Confirmed Activities</h3>
+          <ul id="confirmed-activities-list">
+            <!-- รายการกิจกรรมจะมาที่นี่ -->
+          </ul>
+        </div>
+
+        <div class="panel calendar">
+          <h3>Calender</h3>
+          <div id="calendar-mini"></div>
+
+          <!-- Popup Form -->
+          <div id="event-popup" class="popup hidden">
+            <div class="popup-content">
+              <h4>Add/Edit Event</h4>
+              <label>Title</label>
+              <input type="text" id="event-title" placeholder="Event title" />
+
+              <label>Start Date</label>
+              <input type="date" id="event-start" />
+
+              <label>End Date</label>
+              <input type="date" id="event-end" />
+
+              <label>Color</label>
+              <div class="color-options">
+                <span class="color-option" data-color="#f747cb" style="background:#f747cb"></span>
+                <span class="color-option" data-color="#10b981" style="background:#10b981"></span>
+                <span class="color-option" data-color="#f59e0b" style="background:#f59e0b"></span>
+                <span class="color-option" data-color="#ef4444" style="background:#ef4444"></span>
+              </div>
+
+              <div class="popup-actions">
+                <button id="save-event">Save</button>
+                <button id="delete-event" class="delete-btn">Delete</button>
+                <button id="cancel-event" class="cancel-btn">Cancel</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="panel">
+          <h3>Documents</h3>
+          <ul id="documents-panel">
+            <li>Certificate.pdf</li>
+            <li>Resume.docx</li>
+            <li>Transcript.pdf</li>
+          </ul>
+        </div>
+      </section>
+      <div id="confirm-popup" class="popup hidden">
+        <div class="popup-content">
+          <h4>Enter Event Code</h4>
+          <label for="confirm-event-select">Select Event</label>
+          <select id="confirm-event-select"></select>
+      
+          <label for="confirm-code-input">Enter Code</label>
+          <input type="text" id="confirm-code-input" placeholder="Enter code..." />
+          <div id="confirm-msg" style="margin-top: 10px; font-weight: bold;"></div>
+      
+          <div class="popup-actions">
+            <button onclick="submitEventCode()">Confirm</button>
+            <button onclick="closeConfirmPopup()">Cancel</button>
+          </div>
+          <p id="confirm-msg" style="color:red; font-size: 0.9rem;"></p>
+        </div>
+      </div>
+      
+    </main>
+  </div>
+  <script src="/afterlogin/calender.js"></script>
+</body>
+</html>
