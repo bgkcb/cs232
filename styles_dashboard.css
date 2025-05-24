@@ -1,0 +1,194 @@
+/* ตั้งค่า body ของหน้าเว็บ */
+body {
+  margin: 0; /* เอาระยะขอบรอบๆ ออก */
+  font-family: sans-serif; /* ใช้ฟอนต์แบบไม่มีหัว */
+  background: #e0e0e0; /* พื้นหลังสีเทาอ่อน */
+}
+
+/* กำหนดรูปแบบแถบหัว (header) */
+header {
+  background: #001F3F; /* สีกรมท่า */
+  color: white; /* ตัวอักษรสีขาว */
+  display: flex; /* ใช้ flexbox จัดวาง */
+  justify-content: space-between; /* เว้นช่องว่างระหว่างชิ้นงาน */
+  align-items: center; /* จัดให้อยู่กึ่งกลางตามแกนตั้ง */
+  padding: 1rem; /* กำหนดระยะห่างด้านใน */
+}
+
+/* สไตล์สำหรับแสดงข้อมูลโปรไฟล์ เช่น ชื่อผู้ใช้และรูป */
+.profile {
+  font-size: 1.3rem; /* ขนาดตัวอักษรเล็กลง */
+  font-weight: 600; /* น้ำหนักตัวอักษรกึ่งหนา */
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; /* ฟอนต์สำหรับโปรไฟล์ */
+  display: flex; /* จัดเรียงแนวนอน */
+  align-items: center; /* จัดกึ่งกลางตามแกนตั้ง */
+  gap: 10px; /* ช่องว่างระหว่างข้อความกับรูป */
+}
+
+/* สไตล์รูปโปรไฟล์ */
+.profile-pic {
+  width: 40px; /* กำหนดความกว้าง */
+  height: 40px; /* กำหนดความสูง */
+  border-radius: 50%; /* ทำให้รูปกลม */
+  object-fit: cover; /* ป้องกันภาพบิดเบี้ยวโดยครอป */
+}
+
+/* ลิงก์ในเมนูนำทาง */
+nav a {
+  margin: 0 0.5rem; /* ช่องว่างซ้ายขวา */
+  text-decoration: none; /* เอาเส้นใต้ลิงก์ออก */
+  color: black; /* ตัวอักษรสีดำ */
+  font-size: 1rem; /* ขนาดตัวอักษร */
+  font-weight: bold; /* ตัวอักษรกึ่งหนา */
+  text-align: center; /* จัดกึ่งกลางข้อความ */
+  background: #FFD700; /* พื้นหลังสีทอง */
+  padding: 8px 12px; /* ช่องว่างด้านใน */
+  border-radius: 6px; /* มุมโค้งมน */
+}
+
+/* กำหนดโครงสร้างและตำแหน่งของเนื้อหาหลัก */
+main {
+  display: flex; /* ใช้ flexbox */
+  flex-direction: column; /* เรียงจากบนลงล่าง */
+  align-items: center; /* จัดกึ่งกลางตามแกนขวาง */
+  justify-content: center; /* จัดกึ่งกลางตามแกนนอน */
+  padding: 1rem; /* ระยะขอบด้านใน */
+  width: 100%; /* กว้างเต็มพื้นที่ */
+}
+
+/* กล่องชื่อหัวข้อใหญ่ */
+.title-box {
+  padding: 19px 30px; /* ช่องว่างด้านบนล่าง 19px ซ้ายขวา 30px */
+  border-radius: 10px; /* มุมโค้งมน */
+  background: white; /* พื้นหลังสีขาว */
+  font-size: 1.8rem; /* ตัวอักษรขนาดใหญ่ */
+  text-align: center; /* จัดกึ่งกลางข้อความ */
+  width: 80%; /* กว้าง 80% ของพื้นที่ */
+  max-width: 1000px; /* จำกัดความกว้างสูงสุด */
+  margin: 1rem auto; /* เว้นช่องว่างรอบด้านบนล่าง และจัดกึ่งกลางแนวนอน */
+  border: 2px solid #ffffff; /* ขอบสีขาวหนา 2px */
+  min-width: 1300px; /* กำหนดความกว้างขั้นต่ำ */
+  display: inline-block; /* ให้แสดงแบบบล็อกที่มีขนาดพอดี */
+  font-weight: 600; /* ตัวอักษรกึ่งหนา */
+  font-family: 'Poppins', sans-serif; /* ฟอนต์เฉพาะ */
+  color: #000; /* สีดำ */
+}
+
+/* ข้อความคำอธิบายใต้หัวข้อ */
+.caption {
+  font-family: 'Roboto', sans-serif; /* ฟอนต์สำหรับคำบรรยาย */
+  color: #222; /* สีเทาเข้ม */
+  text-align: center; /* จัดกึ่งกลางข้อความ */
+  font-size: 1.1rem; /* ขนาดตัวอักษรเพิ่มขึ้นเล็กน้อย */
+  padding: 10px; /* ช่องว่างรอบข้อความ */
+  font-weight: bold; /* ตัวอักษรหนา */
+  display: block; /* แสดงในบรรทัดใหม่เต็มบล็อก */
+}
+
+/* กำหนด layout แบบ grid สำหรับกล่องเนื้อหา */
+.grid {
+  display: grid; /* ใช้ CSS Grid */
+  grid-template-columns: repeat(4, 1fr); /* กำหนด 4 คอลัมน์เท่ากัน */
+  grid-template-rows: repeat(4, auto); /* 4 แถว ปรับขนาดอัตโนมัติ */
+  gap: 40px; /* ช่องว่างระหว่างช่อง */
+  padding: 1rem; /* ช่องว่างรอบด้านใน */
+  max-width: 1000px; /* กำหนดความกว้างสูงสุด */
+  margin: 0 auto; /* จัดกึ่งกลางในแนวนอน */
+  justify-content: center; /* จัดคอนเทนต์ให้อยู่กลางกริด */
+}
+
+/* กล่องเนื้อหาแต่ละชิ้น */
+.card {
+  background: #ccc; /* พื้นหลังสีเทา */
+  border-radius: 12px; /* มุมโค้งมน */
+  height: 150px; /* กำหนดความสูง */
+  display: flex; /* ใช้ flexbox */
+  align-items: center; /* จัดกึ่งกลางตามแกนตั้ง */
+  justify-content: center; /* จัดกึ่งกลางตามแกนนอน */
+  font-size: 1.2rem; /* ขนาดตัวอักษร */
+  font-weight: bold; /* ตัวอักษรกึ่งหนา */
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* เงาเบาๆ */
+}
+
+/* กล่องที่ใช้แสดงรูปภาพ */
+.image-card {
+  display: flex;
+  flex-direction: column; /* เรียงจากบนลงล่าง */
+  align-items: center; /* จัดกึ่งกลางตามแกนขวาง */
+  justify-content: center; /* จัดกึ่งกลางตามแกนนอน */
+  width: 280px; /* กว้าง 280px */
+  height: auto; /* สูงอัตโนมัติ */
+  padding: 15px; /* ช่องว่างด้านใน */
+}
+
+/* รูปภาพภายใน image-card */
+.image-card img {
+  aspect-ratio: 1 / 1; /* สัดส่วนภาพ 1:1 */
+  width: 100%; /* กว้างเต็มกล่อง */
+  object-fit: cover; /* ครอปรูปไม่บิดเบี้ยว */
+  display: block; /* แสดงเป็นบล็อก */
+  border-radius: 16px; /* มุมโค้งมนเฉพาะรูปภาพ */
+}
+
+/* ฟอร์ม input, textarea, select ให้เต็มความกว้าง */
+input, textarea, select {
+  width: 100%; /* กว้างเต็มพื้นที่ */
+  margin-bottom: 0.5rem; /* ช่องว่างด้านล่าง */
+  padding: 0.5rem; /* ช่องว่างด้านใน */
+  border-radius: 4px; /* มุมโค้งมน */
+  border: 1px solid #ccc; /* เส้นขอบสีเทา */
+}
+
+/* แถวที่ใช้จัด input หลายช่องให้อยู่ในบรรทัดเดียว */
+.row {
+  display: flex; /* ใช้ flexbox */
+  gap: 1rem; /* ช่องว่างระหว่างช่อง */
+}
+
+/* แท็บเมนูแบบแนวนอน */
+.tabs {
+  display: flex; /* ใช้ flexbox */
+  justify-content: center; /* จัดกึ่งกลาง */
+  gap: 1rem; /* ช่องว่างระหว่างแท็บ */
+  margin: 1rem 0; /* ช่องว่างบนล่าง */
+}
+
+/* ลิงก์แท็บ */
+.tabs a {
+  background: #ddd; /* พื้นหลังสีเทาอ่อน */
+  padding: 0.5rem 1rem; /* ช่องว่างด้านใน */
+  border-radius: 6px; /* มุมโค้งมน */
+  text-decoration: none; /* ไม่มีเส้นใต้ */
+  color: black; /* ตัวอักษรสีดำ */
+}
+
+/* แท็บที่ถูกเลือก (active) */
+.tabs a.active {
+  background: #bbb; /* พื้นหลังสีเทาเข้มขึ้น */
+  font-weight: bold; /* ตัวอักษรหนา */
+}
+
+/* กล่องสำหรับแสดงรายงานหรือข้อมูล */
+.report-box {
+  height: 200px; /* ความสูง */
+  background: #eee; /* พื้นหลังสีเทาอ่อน */
+  border-radius: 8px; /* มุมโค้งมน */
+}
+
+/* ตั้งค่า list ไม่ให้มีเครื่องหมายหน้าแต่ละบรรทัด */
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+/* ช่องว่างใต้แต่ละ list item */
+li {
+  padding: 0.25rem 0;
+}
+
+/* ซ้ำกำหนด .profile อีกครั้งให้แน่ใจ */
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}

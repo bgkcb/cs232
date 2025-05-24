@@ -1,0 +1,201 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background: #e0e0e0;
+}
+header {
+  background: #001F3F; /* สีกรมท่า */
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+.profile { font-size: 1.3rem;       /* เล็กลงจากเดิม */
+  font-weight: 600;        /* น้ำหนักฟอนต์กลาง ๆ */
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+            }
+nav a {
+  margin: 0 0.5rem;
+  text-decoration: none;
+  color: black;
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center;
+  background: #FFD700; /* สีทอง */
+  padding: 8px 12px;
+  border-radius: 6px;
+}
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* จัดวางเนื้อหาให้อยู่ตรงกลาง */
+  justify-content: center;
+  padding: 1rem;
+  width: 100%;
+}
+
+.title-box {
+  padding: 19px 30px;
+  border-radius: 10px;
+  background: white;
+  font-size: 1.8rem;
+  text-align: center;
+  width: 80%; /* ให้กล่องปรับตามหน้าจอ */
+  max-width: 1000px; /* จำกัดขนาดสูงสุด */
+  margin: 1rem auto;
+  border: 2px solid #ffffff;
+  /*box-shadow: 2px 2px 5px rgba(0,0,0,0.2);*/
+  min-width: 1300px; /* กำหนดความกว้างขั้นต่ำ */
+  display: inline-block;
+  margin: 1rem auto;
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
+  color: #000;
+}
+.caption {
+  font-family: 'Roboto', sans-serif;
+  color: #222;
+  text-align: center;
+  font-size: 1.1rem; /* ขยายตัวอักษรให้ใหญ่ขึ้น */
+
+  padding: 10px;
+  font-weight: bold;
+  display: block;
+}
+
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 คอลัมน์ */
+  grid-template-rows: repeat(2, auto); /* 2 แถว */
+  gap: 40px; /* เพิ่มระยะห่างให้ดูสมดุล */
+  padding: 1rem;
+  max-width: 1000px; /* ลดขนาดลงเพื่อให้ไม่ดันไปด้านขวา */
+  margin: 0 auto; /* จัดตำแหน่งให้อยู่ตรงกลาง */
+  justify-content: center; /* บังคับให้เนื้อหาอยู่ตรงกลาง */
+}
+
+.card {
+ background: #ccc;
+  border-radius: 12px;
+  height: 150px; /* ความสูงกล่อง */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.image-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 280px; /* ขยายขนาดกล่องให้สมดุลกับพื้นที่ */
+  height: auto;
+  padding: 15px;
+}
+
+.image-card img {
+  aspect-ratio: 1 / 1;
+  width: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 16px; /* ทำให้เฉพาะรูปมีขอบมน */
+}
+
+/* */
+.form {
+  background: white;
+  padding: 2.5rem;
+  border-radius: 16px;
+  max-width: 850px;
+  width: 100%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  margin: 0 auto; /* ทำให้กล่องอยู่ตรงกลาง */
+}
+
+.form-title {
+  display: block;
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+input, textarea, select {
+  font-size: 1.2rem;
+  padding: 12px;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.skills-section, .participants {
+  margin-top: 20px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: black;
+}
+
+.skills-section label, .participants label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 1.7rem;
+}
+
+/* */
+input, textarea, select {
+  width: 100%;
+  margin-bottom: 0.5rem;
+  padding: 0.5rem;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+.row {
+  display: flex;
+  gap: 1rem;
+}
+.tabs {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+.tabs a {
+  background: #ddd;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  text-decoration: none;
+  color: black;
+}
+.tabs a.active {
+  background: #bbb;
+  font-weight: bold;
+}
+.report-box {
+  height: 200px;
+  background: #eee;
+  border-radius: 8px;
+}
+ul { list-style: none; padding: 0; }
+li { padding: 0.25rem 0; }
+
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.profile-pic {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%; /* ทำให้ภาพกลม */
+  object-fit: cover;  /* ไม่ให้ภาพบิดเบี้ยว */
+}
+

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Add Activities</title>
+  <link rel="stylesheet" href="styles_add.css" />
+</head>
+<body>
+  <header>
+    <div class="profile">
+      <img src="images/user.jpg" alt="Profile Picture" class="profile-pic" />
+      <span>Organizer Name</span>
+    </div>
+    <nav>
+      <a href="dashboard.html">Popular</a>
+      <a href="organized.html">Organized activities</a>
+      <a href="add.html" class="add-btn">ADD +</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="form-container">
+      <h1 class="form-title">ADD Activities</h1>
+
+      <form class="form" onsubmit="confirmActivity(event)">
+        <input type="text" id="activityName" placeholder="Name Activities" required />
+
+        <div class="row">
+          <input type="date" id="date" required />
+          <input type="time" id="time" required />
+        </div>
+
+        <textarea id="description" placeholder="Description Activities"></textarea>
+        <input type="text" id="location" placeholder="Location" required />
+
+        <div class="skills-section">
+          <label>➕ Skills:</label>
+          <select id="skills">
+            <option>เลือกทักษะ</option>
+            <option>SOFTSKILL</option>
+            <option>HARDSKILL</option>
+            <option>GAME</option>
+          </select>
+        </div>
+
+        <div class="participants">
+          <label>➕ Number of participants:</label>
+          <div class="row">
+            <input type="number" id="minParticipants" placeholder="Min" required />
+            <input type="number" id="maxParticipants" placeholder="Max" required />
+          </div>
+        </div>
+
+        <!-- ปุ่มยืนยันกิจกรรม -->
+        <button type="submit" class="confirm-btn">✅ ยืนยันกิจกรรม</button>
+      </form>
+    </div>
+  </main>
+
+  <script>
+    function confirmActivity(event) {
+      event.preventDefault(); // ป้องกันการรีเฟรชหน้าเว็บ
+
+      // ดึงค่าจากฟอร์ม
+      const activityName = document.getElementById("activityName").value;
+      const date = document.getElementById("date").value;
+      const time = document.getElementById("time").value;
+      const description = document.getElementById("description").value;
+      const location = document.getElementById("location").value;
+      const skills = document.getElementById("skills").value;
+      const minParticipants = document.getElementById("minParticipants").value;
+      const maxParticipants = document.getElementById("maxParticipants").value;
+
+      // เก็บข้อมูลใน Local Storage
+      localStorage.setItem("activityName", activityName);
+      localStorage.setItem("date", date);
+      localStorage.setItem("time", time);
+      localStorage.setItem("description", description);
+      localStorage.setItem("location", location);
+      localStorage.setItem("skills", skills);
+      localStorage.setItem("minParticipants", minParticipants);
+      localStorage.setItem("maxParticipants", maxParticipants);
+
+      // ส่งไปยังหน้า activity_info.html
+      window.location.href = "activity_info.html";
+    }
+  </script>
+</body>
+</html>

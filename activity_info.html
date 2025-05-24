@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Activity Info</title>
+  <link rel="stylesheet" href="styles_activity_info.css" />
+</head>
+<body>
+  <header>
+    <div class="profile">
+      <img src="images/user.jpg" alt="Profile Picture" class="profile-pic" />
+      <span>Organizer Name</span>
+    </div>
+    <nav>
+      <a href="dashboard.html">Popular</a>
+      <a href="organized.html">Organized activities</a>
+      <a href="add.html">ADD +</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1 id="activityName"></h1>
+
+    <div class="tabs">
+      <a class="active">Information</a>
+      <a href="participant_info.html">Participant information</a>
+    </div>
+
+    <div class="form">
+      <input type="text" id="activityInput" disabled />
+      
+      <div class="row">
+        <input type="date" id="dateInput" disabled />
+        <input type="time" id="timeInput" disabled />
+      </div>
+      
+      <textarea id="descriptionInput" disabled></textarea>
+      <input type="text" id="locationInput" disabled />
+      <select id="skillsInput" disabled>
+        <option>Skills</option>
+      </select>
+      
+      <div class="row">
+        <input type="number" id="minParticipantsInput" disabled />
+        <input type="number" id="maxParticipantsInput" disabled />
+      </div>
+    </div>
+
+    <button class="report-btn" onclick="window.location.href='stat_report.html'">⚠ Report</button>
+    <a href="dashboard.html" class="back-btn">⬅ BACK HOME</a>
+  </main>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      document.getElementById("activityName").innerText = localStorage.getItem("activityName");
+      document.getElementById("activityInput").value = localStorage.getItem("activityName");
+      document.getElementById("dateInput").value = localStorage.getItem("date");
+      document.getElementById("timeInput").value = localStorage.getItem("time");
+      document.getElementById("descriptionInput").value = localStorage.getItem("description");
+      document.getElementById("locationInput").value = localStorage.getItem("location");
+      document.getElementById("skillsInput").innerText = localStorage.getItem("skills");
+      document.getElementById("minParticipantsInput").value = localStorage.getItem("minParticipants");
+      document.getElementById("maxParticipantsInput").value = localStorage.getItem("maxParticipants");
+    });
+  </script>
+</body>
+</html>

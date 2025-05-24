@@ -1,0 +1,353 @@
+input, textarea, select {
+  width: 100%;
+  margin-bottom: 0.5rem;
+  padding: 0.5rem;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+.row {
+  display: flex;
+  gap: 1rem;
+}
+.tabs {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+.tabs a {
+  background: #ddd;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  text-decoration: none;
+  color: black;
+}
+.tabs a.active {
+  background: #bbb;
+  font-weight: bold;
+}
+.report-box {
+  height: 200px;
+  background: #eee;
+  border-radius: 8px;
+}
+ul { list-style: none; padding: 0; }
+li { padding: 0.25rem 0; }
+
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.profile-pic {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%; /* ทำให้ภาพกลม */
+  object-fit: cover;  /* ไม่ให้ภาพบิดเบี้ยว */
+}
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background: #e0e0e0;
+}
+/* ปรับ header ให้มีความสมดุลกับ layout */
+header {
+  background: #001F3F;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+/* ปรับโปรไฟล์ให้สมดุลกับ header */
+.profile {
+  font-size: 1.3rem;
+  font-weight: 600;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+nav a {
+  margin: 0 0.5rem;
+  text-decoration: none;
+  color: black;
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center;
+  background: #FFD700;
+  padding: 8px 12px;
+  border-radius: 6px;
+}
+.form-title {
+  padding: 19px 30px;
+  border-radius: 10px;
+  background: white;
+  font-size: 1.8rem;
+  text-align: center;
+  width: 80%; /* ให้กล่องปรับตามหน้าจอ */
+  max-width: 1000px; /* จำกัดขนาดสูงสุด */
+  margin: 1rem auto;
+  border: 2px solid #ffffff;
+  /*box-shadow: 2px 2px 5px rgba(0,0,0,0.2);*/
+  min-width: 1300px; /* กำหนดความกว้างขั้นต่ำ */
+  display: inline-block;
+  margin: 1rem auto;
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
+  color: #000;
+}
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+
+.form {
+  background: white;
+  padding: 2.5rem;
+  border-radius: 16px;
+  max-width: 850px;
+  width: 100%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  font-family: 'Poppins', sans-serif;
+  margin: 2rem auto;
+}
+
+/* ปรับแต่ง input, textarea และ select */
+input, textarea, select {
+  font-size: 1.2rem;
+  padding: 12px;
+  width: 100%;
+  border-radius: 6px;
+  border: 1px solid #bbb;
+  margin-bottom: 12px;
+}
+
+.form-title {
+  display: block;
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.skills-section, .participants {
+  margin-top: 20px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #222;
+}
+
+.skills-section label, .participants label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 1.7rem;
+  color: #444; /* ทำให้สีเข้มนิดหน่อย */
+}
+input, textarea, select {
+  width: 100%;
+  margin-bottom: 0.5rem;
+  padding: 0.5rem;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+.row {
+  display: flex;
+  gap: 1rem;
+}
+.tabs {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+.tabs a {
+  background: #ddd;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  text-decoration: none;
+  color: black;
+}
+.tabs a.active {
+  background: #bbb;
+  font-weight: bold;
+}
+.report-box {
+  height: 200px;
+  background: #eee;
+  border-radius: 8px;
+}
+ul { list-style: none; padding: 0; }
+li { padding: 0.25rem 0; }
+
+.confirm-btn {
+  background: #28a745;
+  color: white;
+  padding: 12px 18px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.confirm-btn:hover {
+  background: #218838;
+}
+/* ปรับแต่งปุ่มย้อนกลับ */
+.back-btn {
+  display: block;
+  width: 180px;
+  text-align: center;
+  margin: 20px auto;
+  padding: 12px 16px;
+  background: #00509e;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 8px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in-out;
+}
+
+.back-btn:hover {
+  background: #003f7f;
+}
+
+/* ปรับแต่งกรอบของแท็บ */
+.tabs {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 1rem 0;
+  padding: 10px;
+  border-radius: 8px;
+  background: white;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.tabs a {
+  text-decoration: none;
+  color: #333;
+  padding: 12px 20px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+.tabs a.active {
+  background: #00509e;
+  color: white;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.tabs a:hover {
+  background: #ddd;
+}
+#activityName {
+  font-size: 2rem; /* ขยายขนาดใหญ่ขึ้น */
+  font-weight: bold; /* ทำให้ตัวอักษรเข้มขึ้น */
+  color: #00509e; /* ใช้สีน้ำเงินเข้มให้ดูโดดเด่น */
+  background: #f0f0f0; /* เพิ่มพื้นหลังอ่อนเพื่อให้ตัวอักษรเด่น */
+  padding: 10px;
+  border-radius: 8px; /* ทำให้ขอบมน */
+  text-align: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* เพิ่มเงาให้ดูมีมิติ */
+  display: inline-block;
+  width: fit-content;
+  margin: 10px auto;
+}
+.report-btn {
+  display: block;
+  width: 160px;
+  margin: 20px auto;
+  padding: 12px;
+  background: #dc3545;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in-out;
+}
+
+.report-btn:hover {
+  background: #c82333;
+}
+h1 {
+  font-size: 2rem; /* เพิ่มขนาดตัวอักษร */
+  font-weight: bold; /* ทำให้ตัวอักษรเข้มขึ้น */
+  color: #00509e; /* ใช้สีน้ำเงินเข้มให้ดูชัดเจน */
+  background: #f0f0f0; /* เพิ่มพื้นหลังอ่อนเพื่อให้ตัวอักษรเด่น */
+  padding: 12px;
+  border-radius: 8px; /* ทำให้ขอบมน */
+  text-align: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* เพิ่มเงาให้ดูมีมิติ */
+  display: inline-block;
+  width: fit-content;
+  margin: 15px auto;
+}
+.title-box {
+  padding: 19px 30px;
+  border-radius: 10px;
+  background: white;
+  font-size: 1.8rem;
+  text-align: center;
+  width: 80%; /* ให้กล่องปรับตามหน้าจอ */
+  max-width: 1000px; /* จำกัดขนาดสูงสุด */
+  margin: 1rem auto;
+  border: 2px solid #ffffff;
+  /*box-shadow: 2px 2px 5px rgba(0,0,0,0.2);*/
+  min-width: 1300px; /* กำหนดความกว้างขั้นต่ำ */
+  display: inline-block;
+  margin: 1rem auto;
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
+  color: #000;
+}
+.participants {
+  max-width: 900px;
+  width: 80%;
+  margin: 1rem auto;
+  padding: 20px;
+  border: 3px solid #00509e;
+  border-radius: 12px;
+  background: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.participants p {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #00509e;
+}
+ul {
+  list-style: none;
+  padding: 0;
+  font-size: 1.4rem;
+}
+
+li {
+  padding: 10px;
+  font-weight: bold;
+  background: #e0e0e0;
+  border-radius: 8px;
+  margin: 5px auto;
+  display: inline-block;
+  width: 80%;
+}
