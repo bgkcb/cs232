@@ -1,0 +1,38 @@
+<!-- create-activity.html -->
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <title>เพิ่มกิจกรรมใหม่</title>
+  <link rel="stylesheet" href="css/organizer.css">
+  <link rel="stylesheet" href="css/navbar.css">
+</head>
+<body>
+  <div id="navbar-container"></div>
+  <div class="container">
+    <h1>เพิ่มกิจกรรมใหม่</h1>
+      <section class="form-section">
+        <form id="activityForm">
+          <div class="form-left">
+            <input type="text" id="title" placeholder="ชื่อกิจกรรม" required />
+            <textarea id="description" placeholder="รายละเอียดกิจกรรม" required></textarea>
+            <input type="date" id="date" required />
+            <input type="text" id="secretCode" placeholder="รหัสกิจกรรม (ใช้ยืนยัน)" required />
+            <input type="number" id="maxParticipants" placeholder="จำนวนผู้เข้าร่วมสูงสุด" min="1" required />
+          </div>
+        
+          <div class="form-right">
+            <label>เลือกสกิลที่กิจกรรมนี้ให้:</label>
+            <div id="skillCheckboxes">
+              <!-- กล่อง checkbox จาก JS -->
+            </div>
+            <button type="submit" class="submit-btn"> สร้างกิจกรรม</button>
+            <div id="formMessage"></div>
+          </div>
+        </form>
+      </section>
+  </div>
+  <script src="js/navbar.js"></script>
+  <script src="js/organizer.js"></script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Organizer Dashboard - Eduskill</title>
+  <link rel="stylesheet" href="css/organizer.css">
+  <link rel="stylesheet" href="css/navbar.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <div id="navbar-container"></div>
+
+  <div class="container">
+    <div class="header-section">
+      <h1>📋 กิจกรรมที่คุณสร้าง</h1>
+      <a href="create-activity.html" class="add-button">
+        <i class="fas fa-plus"></i> เพิ่มกิจกรรมใหม่
+      </a>
+    </div>
+
+    <section class="list-section">
+      <div class="activity-grid" id="activityList">
+      </div>
+    </section>
+  </div>
+
+  <!-- Activity Detail Modal -->
+  <div id="activity-modal" class="modal hidden">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeModal()">&times;</span>
+      <h2 id="modal-title">รายละเอียดกิจกรรม</h2>
+      <p id="modal-description"></p>
+      <div class="modal-info">
+        <p><strong>รหัสกิจกรรม:</strong> <span id="modal-code"></span></p>
+        <p><strong>วันที่:</strong> <span id="modal-date"></span></p>
+      </div>
+
+      <div class="modal-section">
+        <h3>ผู้เข้าร่วม</h3>
+        <ul id="modal-participants"></ul>
+      </div>
+
+      <div class="modal-section">
+        <h3>ความคิดเห็น (Feedback)</h3>
+        <ul id="modal-feedbacks"></ul>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/navbar.js"></script>
+  <script src="js/list.js"></script>
+</body>
+</html>

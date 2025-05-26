@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Advisor Dashboard - Eduskill</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="css/advisor.css" />
+  <link rel="stylesheet" href="css/navbar.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div id="navbar-container"></div>
+  <div class="advisor-container">
+    <header>
+      <h1>📊 Eduskill | Advisor Dashboard</h1>
+    </header>
+
+    <section class="overview">
+      <h2>ค่าเฉลี่ย Skill รวม (ทุกนักศึกษา)</h2>
+      <canvas id="skillPieChart" width="400" height="400"></canvas>
+    </section>
+
+    <section class="students">
+      <h2>นักศึกษาในที่ปรึกษา</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>ชื่อ</th>
+            <th>Skills</th>
+            <th>กิจกรรมที่เข้าร่วม</th>
+          </tr>
+        </thead>
+        <tbody id="studentTableBody"></tbody>
+      </table>
+    </section>
+  </div>
+  <script src="js/navbar.js"></script>
+  <script src="js/advisor.js"></script>
+</body>
+</html>

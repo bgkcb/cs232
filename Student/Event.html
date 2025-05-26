@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Event Page</title>
+  <link rel="stylesheet" href="css/Event.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="css/navbar.css"/>
+  <script src="js/navbar.js"></script>
+</head>
+<body>
+
+  <div id="navbar-container"></div>
+
+  <main class="main-content">
+    <section class="event-gallery">
+      <h2>Events</h2>
+      <div class="gallery-container">
+        <img src="picture/Event1.jpg" alt="2020 BUSINESS CONFERENCE" class="event-image active" />
+        <img src="picture/Event2.jpg" alt="Digital marketing seminar grow your business" class="event-image" />
+        <img src="picture/Event3.jpg" alt="Classmeeting SMP API AL-HUDA" class="event-image" />
+        <img src="picture/Event4.jpg" alt="LeaderShip Camp 4" class="event-image" />
+        <div class="gallery-controls">
+          <button id="prevBtn">&#10094;</button>
+          <button id="nextBtn">&#10095;</button>
+        </div>
+        <div class="gallery-dots">
+          <span class="dot active" data-index="0"></span>
+          <span class="dot" data-index="1"></span>
+          <span class="dot" data-index="2"></span>
+          <span class="dot" data-index="3"></span>
+        </div>
+      </div>
+      <div class="event-list">
+        <ul>
+        </ul>
+      </div>
+
+      <!-- Popup ลงทะเบียน -->
+      <div id="register-popup" class="popup hidden">
+        <div class="popup-content">
+          <h4 id="popup-register-title">Add/Edit Event</h4> <!-- ต้องมี id นี้ -->
+          <label for="register-title">Title</label>
+          <input type="text" id="register-title" placeholder="Event title" />
+
+          <label for="register-date">Event Date</label>
+          <input type="date" id="register-date" />
+
+          <div class="popup-actions">
+            <button id="register-save">Save</button>
+            <button id="register-cancel" class="cancel-btn">Cancel</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/Event.js"></script>
+</body>
+</html>

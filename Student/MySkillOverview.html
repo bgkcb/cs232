@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>My Skill Overview</title>
+  <link rel="stylesheet" href="css/MySkillOverview.css" />
+  <link rel="stylesheet" href="css/navbar.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+  <div id="navbar-container"></div>
+
+  <div class="layout">
+    <!-- Main content -->
+    <main class="main-content">
+      <div class="container">
+        <div class="skills-box">
+          <div class="skill-section">
+            <h3>HARD SKILL</h3>
+            <div class="skills-list" id="hardSkillList"></div>
+          </div>
+          <div class="skill-section">
+            <h3>SOFT SKILL</h3>
+            <div class="skills-list" id="softSkillList"></div>
+          </div>
+        </div>
+        <!-- ย้าย learning activities มาอยู่ใน container ด้วย -->
+        <div class="skill-activies" style="margin-top: 30px;">
+          <h3>LEARNING ACTIVITIES</h3>
+          <div class="learning-activities-list" id="learningActivitiesList">
+            <div class="learning-activities-hard"></div>
+            <div class="learning-activities-soft"></div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="js/navbar.js"></script>
+  <script src="js/MySkillOverview.js"></script>
+</body>
+</html>

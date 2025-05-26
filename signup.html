@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>EDUSKILL - Sign Up</title>
+  <link rel="stylesheet" href="css/signup.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Sign Up</h1>
+    <form id="signup-form">
+      <input type="text" id="fullname" placeholder="ชื่อ-นามสกุล" required />
+      <input type="text" id="studentId" placeholder="รหัสนักศึกษา (เช่น 6609650053)" required />
+      <input type="email" id="email" placeholder="Email" required />
+      <input type="password" id="password" placeholder="Password" required />
+      <input type="text" id="advisorId" placeholder="รหัสอาจารย์ที่ปรึกษา" required />
+      <button type="submit">สมัครใช้งาน</button>
+    </form>
+
+    <div id="verify-section" style="display: none; margin-top: 1rem;">
+      <input type="text" id="verifyCode" placeholder="กรอกรหัสยืนยันจาก Email" required />
+      <button id="confirmBtn">ยืนยันรหัส</button>
+    </div>
+
+    <p class="bottom-text">
+      Already have an account? <a href="signin.html">Sign In</a>
+    </p>
+
+    <p id="msg"></p>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/amazon-cognito-identity-js@6.2.0/dist/amazon-cognito-identity.min.js"></script>
+  <script src="js/signup.js"></script>
+</body>
+</html>

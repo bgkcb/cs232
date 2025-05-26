@@ -1,0 +1,271 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #f0f4f8;
+  margin: 0;
+  padding: 2rem;
+}
+
+.container {
+  max-width: 1250px;
+  margin: 6rem auto;
+  background: white;
+  padding: 2.5rem 3rem;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+
+h1, h2 {
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.form-section h2 {
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+form#activityForm {
+  display: grid;
+  grid-template-columns: 2fr 1.2fr;
+  column-gap: 3rem;
+  row-gap: 1rem;
+  align-items: start;
+}
+
+form#activityForm input,
+form#activityForm textarea {
+  width: 80%;
+  padding: 0.4rem 0.2rem;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  font-size: 0.95rem;
+  box-sizing: border-box;
+  background: transparent;
+  margin-bottom: 1rem;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+form#activityForm input:focus,
+form#activityForm textarea:focus {
+  border-color: #007bff;
+}
+
+form#activityForm textarea {
+  resize: vertical;
+  min-height: 80px;
+  grid-column: 1 / 2;
+}
+
+form#activityForm label {
+  font-weight: bold;
+  margin-top: 1rem;
+  grid-column: 2 / 3;
+  margin-bottom: 0.5rem;
+}
+
+#skillCheckboxes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1rem;
+  padding-top: 0.5rem;
+  grid-column: 2 / 3;
+  min-height: 100%;
+  height: 100%;
+  
+}
+
+#skillCheckboxes label {
+  background: #977e91;
+  color: #fff;
+  padding: 0.4rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+#skillCheckboxes input[type="checkbox"] {
+  margin: 0px;
+  align-self: center;
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+
+#formMessage {
+  grid-column: 2 / 3;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: green;
+  justify-self: start;
+}
+
+
+/* ปุ่มสร้างอยู่ขวาล่าง */
+form#activityForm button[type="submit"] {
+  grid-column: 2 / 3;
+  justify-self: end;
+  background-color: #533B4D;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  margin-top: 1rem;
+}
+
+form#activityForm button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+.list-section ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.list-section li {
+  background: #f3f3f3;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border-radius: 5px;
+}
+
+/* Modal */
+.modal {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.modal.hidden {
+  display: none;
+}
+
+.modal-content {
+  background: white;
+  padding: 2rem;
+  width: 600px;
+  max-height: 90vh;
+  overflow-y: auto;
+  border-radius: 8px;
+  position: relative;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px; right: 15px;
+  font-size: 24px;
+  cursor: pointer;
+}
+#date,
+#secretCode,
+#maxParticipants {
+  grid-column: 1 / 2;
+}
+
+.activity-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.activity-grid li {
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 1.2rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  transition: transform 0.2s, box-shadow 0.2s;
+  cursor: pointer;
+}
+
+.activity-grid li:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+}
+
+.add-button {
+  background-color: #533B4D;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-color 0.2s;
+  font-size: 0.95rem;
+}
+
+.add-button:hover {
+  background-color: #372631;
+}
+
+.header-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  gap: 1rem; /* เพิ่มช่องว่างระหว่างหัวข้อกับปุ่ม */
+  flex-wrap: wrap; /* เพื่อรองรับหน้าจอแคบ */
+}
+
+.header-section h1 {
+  margin: 0;
+  font-size: 1.4rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+form#activityForm input::placeholder,
+form#activityForm textarea::placeholder {
+  color: #aaa;
+  font-style: italic;
+}
+
+form#activityForm .submit-btn {
+  background-color: #533B4D;
+  color: white;
+  padding: 0.7rem 1.4rem;
+  font-size: 1rem;
+  border-radius: 6px;
+  border: none;
+  transition: background 0.3s ease;
+}
+
+form#activityForm .submit-btn:hover {
+  background-color: #372631;
+}
+
+.modal-content h2 {
+  margin-top: 0;
+  color: #533B4D;
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+
+.modal-section h3 {
+  margin-top: 2rem;
+  color: #333;
+  font-size: 1.1rem;
+}
+
+.modal-section ul {
+  list-style: disc;
+  margin-left: 1.5rem;
+  margin-top: 0.5rem;
+}
